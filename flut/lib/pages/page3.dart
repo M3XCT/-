@@ -5,8 +5,8 @@ class page3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Center(
+    return MaterialApp(
+        home: Center(
           child: Text('33333333333333333333'),
         )
 

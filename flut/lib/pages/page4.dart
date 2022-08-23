@@ -6,10 +6,11 @@ class page4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
-          child: Text('44444444444444444'),
+        body:AppBar(
+          title: Text('Корзина'),
         )
+        );
 
-    );
+
   }
 }
