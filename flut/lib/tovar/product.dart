@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
 class Product extends StatelessWidget {
-  const Product({Key? key}) : super(key: key);
+  const Product({Key? key,
+    required this.image,
+    required this.title,
+    required this.price,
+
+  }) : super(key: key);
+  final String image, title;
+  final int price;
 
   @override
   Widget build(BuildContext context) {
@@ -13,10 +20,10 @@ class Product extends StatelessWidget {
         ),
         child:Column(
           children: [
-            Row(children: [Image(image: AssetImage('assets/138427_1.jpg'),width: 150, height: 150)]),
-            Row(children: [Text('Шампунь')],),
-            Row(children: [Text('8787мл ООО"лицо"')],),
-            Row(children: [Text('1000'+'р')],),
+            Row(children: [Image.asset(image,width: 150, height: 150)]),
+            Row(children: [Text(title),]),
+            Row(children: [Text(title)],),
+            Row(children: [Text(price.toString()+'р')],),
             Row(children: [ElevatedButton(onPressed: (){}, child:Text('Купить'),style: ButtonStyle(
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
@@ -42,3 +49,4 @@ class Product extends StatelessWidget {
     );
   }
 }
+
