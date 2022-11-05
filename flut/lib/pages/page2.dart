@@ -13,43 +13,15 @@ class page2 extends StatelessWidget {
           child:Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [SearchForm(),
-              Row(
-               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                Product(),
-                  Product(),
-                ],
+              Column(
+              children: List.generate(dem_product.length,(index) => Product
+                (image: dem_product[index].image,
+                  title: dem_product[index].title,
+                  price: dem_product[index].price
               ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Product(),
-              Product(),
-            ],
-          ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Product(),
-                  Product(),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Product(),
-                  Product(),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Product(),
-                  Product(),
-                ],
               ),
 
-        ])
+              )])
         )
 
     ));
